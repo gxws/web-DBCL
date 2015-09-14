@@ -1,0 +1,77 @@
+extends ../public/_layout
+block title
+  title DBCL-3-账户余额不足提示（可以使用信用额度）
+block container
+  .pa.container
+    form(action="" )
+      .pa.info.inf2
+        p
+          em.text-white 您的账户余额不足，还需。
+          em.text-yellow 20.00
+          em.text-white 元。
+        p
+          em.text-white 是否合并账户并开通信用额度
+          em.text-yellow 2000
+          em.text-white 元（账期30天）？
+      div.pa.bx.merge
+        a.check-btn.active(href="javascript:;" data-tag="1")
+        input(type="checkbox" style="display:none;" checked="checked")
+        em.text-white 同意
+        a.link(href="#") 合并账户电子协议
+      div.pa.bx.credits
+        a.check-btn.active(href="javascript:;" data-tag="1")
+        input(type="checkbox" style="display:none;" checked="checked")
+        em.text-white 同意
+        a.link(href="#") 信用额度电子协议
+      a#btn-not.pa.btn.btn-ps.btn-dredge(href="javascript:;" onfocus="showdiv('btn-dredge')" onblur="closediv('btn-dredge')")
+        img(src="../static/images/p135_btn_dredge.png")
+      div.pa.btn.btn-ps.btn-dredge.nom
+      div#btn-dredge.pa.btn.btn-ps.btn-dredge.focus(style="z-index:5;visibility:hidden;")
+      div#dredge-not.pa.btn.btn-ps.btn-dredge.not(style="z-index:10;visibility:hidden;")
+block script
+  script(src="../../static/public/js/jquery.min.js")
+  script(type='text/javascript').
+    /**
+    * 机顶盒编号
+    * @method base.tbId
+    * @since p53
+    * @type string
+    * @default 00000000000
+    */
+    //base.tbId = window.guangxi ? guangxi.getStbNum() || guangxi.System.newwork.macAddress.replace(/:/g, '').replace(/No Card/g, '') || doc.all.ip.value : '00000000000';
+    /**
+    * 机顶盒类型
+    * @method base.tbType
+    * @since p53
+    * @type string
+    * @default 0000
+    */
+    //base.tbType = window.iPanel ? /(Safari)|(Chrome)|(Firefox)/.test(navigator.userAgent) ? base.tbId.length == 11 && base.tbId.substring(2, 4) == '19' ? '0002' : window.iPanel.getGlobalVar('RESOLUTION_1280_720') ? '0003' : '0002' : '0001' : '0000';
+    //if(base.tbType != (0002 || '0002' || 0003 || '0003'))return false;
+    (function(window, undefined){
+      var tag = 0;
+      $(document).on('click','.check-btn',function(){
+        var $this  = $(this),
+            $input = $this.next('input'),
+            tag    = $this.attr('data-tag'),
+            $checkbox = $this.parents('form').find('input[type=checkbox]'),
+            $checked,
+            tag;
+        $this[tag==0?'addClass' : tag==1?'removeClass': false]('active');
+        $this.attr('data-tag',tag==1?'0': tag==0?'1':false);
+        $input.prop("checked",tag == 1 ? false : tag == 0 ? true : null);
+        var $checked = $this.parents('form').find('input[type=checkbox]:checked'),
+        tag = $checked.size()==$checkbox.size();
+        $('#btn-not').css('visibility',tag ? 'visible' : 'hidden');
+        $('#dredge-not').css('visibility',!tag ? 'visible' : 'hidden');
+      }).on('click', '#btn-not', function(){
+        $(this).parents('form').submit();
+      });
+    })(window)
+    function showdiv(id) {
+        document.getElementById(id).style.visibility="visible";
+    }
+
+    function closediv(id) {
+        document.getElementById(id).style.visibility="hidden";
+    }

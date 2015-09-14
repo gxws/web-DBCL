@@ -1,0 +1,13 @@
+extends ../public/_layout
+block title
+  title DBCL-14-账户不能充值提示
+block container
+  .pa.container
+    .pa.icon.status-icon.fail
+    .pa.status-info.fail.tc 充值失败！
+    .pa.info.inf3
+      em.text-white 您的机顶盒暂不支持电视充值，请前往线下广电营业厅完成账户充值。
+    a.pa.btn.btn-ps.btn-confirm(href="#" onfocus="showdiv('btn')" onblur="closediv('btn')")
+      img(src="../static/images/p135_ok_btn.png")
+    div.pa.btn.btn-ps.btn-confirm.nom
+    div#btn.pa.btn.btn-ps.btn-confirm.focus(style="visibility:hidden;")

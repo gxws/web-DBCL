@@ -1,0 +1,83 @@
+extends ../public/_layout
+block title
+  title DBCL-12-选择充值金额
+block container
+  .pa.container.text-white
+    form#fm(action="http://www.baidu.com" method="post")
+      div.pa.customer-name.title-name 客户姓名：广西网视信息工程有限公司
+      div.pa.stb-nub.title-name 机顶盒号：01013148185
+      div.pa.topup-title.title-name 充值金额：
+      div.pa.topup-btn.pm1
+        a.pa.topup-btn.ps(href="#" onblur="closediv('topup-btn1');showdiv('topup-text1');" onfocus="showdiv('topup-btn1');showdiv('topup-text1');")
+          img(src="../static/images/p135_topup_btn.png")
+        div.pa.topup-btn.ps.nom
+        div#topup-btn1.pa.topup-btn.ps.focus(style="visibility:hidden;")
+        div#topup-text1.pa.topup-btn.tc.text(style="visibility:visible;" _tag="50") 50元
+      div.pa.topup-btn.pm2
+        a.pa.topup-btn.ps(href="#" onblur="closediv('topup-btn2');showdiv('topup-text2');" onfocus="showdiv('topup-btn2');showdiv('topup-text2');")
+          img(src="../static/images/p135_topup_btn.png")
+        div.pa.topup-btn.ps.nom
+        div#topup-btn2.pa.topup-btn.ps.focus(style="visibility:hidden;")
+        div#topup-text2.pa.topup-btn.tc.text(style="visibility:visible;") 150元
+      div.pa.topup-btn.pm3
+        a.pa.topup-btn.ps(href="#" onblur="closediv('topup-btn3');showdiv('topup-text3');" onfocus="showdiv('topup-btn3');showdiv('topup-text3');")
+          img(src="../static/images/p135_topup_btn.png")
+        div.pa.topup-btn.ps.nom
+        div#topup-btn3.pa.topup-btn.ps.focus(style="visibility:hidden;")
+        div#topup-text3.pa.topup-btn.tc.text(style="visibility:visible;") 250元
+      div.pa.oter.title-name 其 他：
+      input#ipt.pa.ipt-text(type="text" onblur="closediv('ipt-text');minVal();" onfocus="showdiv('ipt-text')" oninput="rex()")
+      div#ipt-text.pa.ipt-focus(style="visibility:hidden;")
+      a.pa.btn.btn-iptok(href="#" onblur="closediv('btn-ok')" onfocus="showdiv('btn-ok')" onclick="fmsubmit('fm')" )
+        img(src="../static/images/p135_ok_btn.png")
+      div.pa.btn.btn-iptok.nom
+      div#btn-ok.pa.btn.btn-iptok.focus(style="visibility:hidden;")
+      div#error.pa.error 输入金额必须大于充值金额
+block script
+  script(type='text/javascript').
+    /**
+    * 机顶盒编号
+    * @method base.tbId
+    * @since p53
+    * @type string
+    * @default 00000000000
+    */
+    //base.tbId = window.guangxi ? guangxi.getStbNum() || guangxi.System.newwork.macAddress.replace(/:/g, '').replace(/No Card/g, '') || doc.all.ip.value : '00000000000';
+    /**
+    * 机顶盒类型
+    * @method base.tbType
+    * @since p53
+    * @type string
+    * @default 0000
+    */
+    //base.tbType = window.iPanel ? /(Safari)|(Chrome)|(Firefox)/.test(navigator.userAgent) ? base.tbId.length == 11 && base.tbId.substring(2, 4) == '19' ? '0002' : window.iPanel.getGlobalVar('RESOLUTION_1280_720') ? '0003' : '0002' : '0001' : '0000';
+    //if(base.tbType != (0002 || '0002' || 0003 || '0003'))return false;
+    function rex (){
+      var ipt = document.getElementById('ipt'),
+          val = ipt.value,
+          text = val.replace(/[^\d]/g,'');
+      ipt.value = text;
+    }
+    function minVal(){
+      var ipt = document.getElementById('ipt'),
+          val = ipt.value,
+          text = val,
+          min = document.getElementById('topup-text1').innerHTML.replace('元','');
+      if(text < min){
+        text = min;
+      }
+      ipt.value = text;
+    }
+    function cLear(){
+      document.getElementById('error').innerHTML ='';
+    }
+    function showdiv(id) {
+        document.getElementById(id).style.visibility="visible";
+    }
+
+    function closediv(id) {
+        document.getElementById(id).style.visibility="hidden";
+    }
+    function fmsubmit(id){
+      document.getElementById(id).submit();
+    }

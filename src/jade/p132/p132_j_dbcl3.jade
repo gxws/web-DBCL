@@ -1,0 +1,14 @@
+extends ../public/_layout
+block title
+  title DBCL-3-账户余额不足提示（不能使用信用额度）
+block container
+  .pa.container
+    .pa.icon.icon-notsuff
+    .pa.info.inf1.tc
+      em.text-white 您的账户余额不足，还需
+      em.text-yellow 20.00
+      em.text-white 元。
+    a.pa.btn.btn-ps.btn-topup(href="#" onfocus="showdiv('btn')" onblur="closediv('btn')")
+      img(src="../static/images/p135_topup_btn_lg.jpg")
+    div.pa.btn.btn-ps.btn-topup.nom
+    div#btn.pa.btn.btn-ps.btn-topup.focus(style="visibility:hidden;")

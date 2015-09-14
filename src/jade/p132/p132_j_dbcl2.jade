@@ -1,0 +1,14 @@
+extends ../public/_layout
+block title
+  title DBCL-2-账户余额欠费提示
+block container
+  .pa.container
+    .pa.icon.icon-arrearage
+    .pa.info.inf1.tc
+      em.text-white 请还清账户欠款。
+      em.text-yellow 200.10
+      em.text-white 元才能享受后续服务。
+    a.pa.btn.btn-ps.btn-topup(href="#" onfocus="showdiv('btn')" onblur="closediv('btn')")
+      img(src="../static/images/p135_topup_btn_lg.jpg")
+    div.pa.btn.btn-ps.btn-topup.nom
+    div#btn.pa.btn.btn-ps.btn-topup.focus(style="visibility:hidden;")

@@ -1,0 +1,32 @@
+extends ../public/_layout
+block title
+  title DBCL-8-开通成功
+block container
+  .pa.container
+    .pa.icon.status-icon.succeed.succeed1
+    .pa.status-info.succeed.succeed1.tc 开通成功！
+    .pa.info.inf8
+      .pa.name.name1
+        .pa.title-name.lt
+          em 本次充值：
+        .pa.info-text
+          em {210}元
+      .pa.name.name2
+        .pa.title-name.lt
+          em 开通产品：
+        .pa.info-text
+          em {产品包名产品包名产品包名产品包}
+      .pa.name.name3
+        .pa.title-name.lt
+          em 产品单价：
+        .pa.info-text
+          em {1000.00元}
+      .pa.name.name4
+        .pa.title-name.lt
+          em 到期日期：
+        .pa.info-text
+          em {2015/8/23}
+    a.pa.btn.btn-cf.btn-confirm(href="#" onfocus="showdiv('btn')" onblur="closediv('btn')")
+      img(src="../static/images/p135_ok_btn.png")
+    div.pa.btn.btn-cf.btn-confirm.nom
+    div#btn.pa.btn.btn-cf.btn-confirm.focus(style="visibility:hidden;")

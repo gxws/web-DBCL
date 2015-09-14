@@ -1,0 +1,64 @@
+extends ../public/_layout
+block title
+  title DBCL-8-处理中
+block container
+  .pa.container
+    .pa.icon.icon-waiting
+    .pa.info.inf5.tc
+      em.text-white  处理中，请耐心等待...
+    a.pa.btn.btn-ps.btn-result(href="#" onfocus="showdiv('btn')" onblur="closediv('btn')")
+      img(src="../static/images/p135_btn-vr.png")
+    div#btn-vr.pa.btn.btn-ps.btn-result.nom(data-ajax="javascript:;" data-status="p132_j_dbcl9.html" data-fail="p132_j_dbcl11.html")
+    div#btn.pa.btn.btn-ps.btn-result.focus(style="visibility:hidden;")
+block script
+  script(src="../../static/public/js/jquery.min.js")
+  script(type='text/javascript').
+    /**
+    * 机顶盒编号
+    * @method base.tbId
+    * @since p53
+    * @type string
+    * @default 00000000000
+    */
+    //base.tbId = window.guangxi ? guangxi.getStbNum() || guangxi.System.newwork.macAddress.replace(/:/g, '').replace(/No Card/g, '') || doc.all.ip.value : '00000000000';
+    /**
+    * 机顶盒类型
+    * @method base.tbType
+    * @since p53
+    * @type string
+    * @default 0000
+    */
+    //base.tbType = window.iPanel ? /(Safari)|(Chrome)|(Firefox)/.test(navigator.userAgent) ? base.tbId.length == 11 && base.tbId.substring(2, 4) == '19' ? '0002' : window.iPanel.getGlobalVar('RESOLUTION_1280_720') ? '0003' : '0002' : '0001' : '0000';
+    //if(base.tbType != (0002 || '0002' || 0003 || '0003'))return false;
+    (function(window,undefined){
+      var time = null,
+          $div = $('#btn-vr'),
+          nb = 0;
+      time = setInterval(function(){
+        if(nb>=30){
+          location.href= $div.attr('data-fail');
+          return false;
+        }
+        ajaxgo($div.attr('data-ajax'),function(d){
+          if(d.status==1){
+            clearInterval(time);
+            location.href = $div.attr('data-status');
+          }else if(d.status==0){
+            clearInterval(time);
+            location.href = $div.attr('data-fail');
+          }
+          nb +=3;
+        },{"status":"1"});
+      },3000);
+    })()
+    function ajaxgo (url, fn, demo, data, method, datatype){
+      fn = fn || Fn;
+      url == 'javascript:;' ? fn(demo) : $[method || 'post'](url, data, fn, datatype || 'json');
+    };
+    function showdiv(id) {
+        document.getElementById(id).style.visibility="visible";
+    }
+
+    function closediv(id) {
+        document.getElementById(id).style.visibility="hidden";
+    }

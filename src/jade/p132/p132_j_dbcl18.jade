@@ -1,0 +1,22 @@
+extends ../public/_layout
+block title
+  title DBCL-13-充值成功
+block container
+  .pa.container
+    .pa.icon.status-icon.succeed.succeed1
+    .pa.status-info.succeed.succeed1.tc 充值成功！
+    .pa.info.inf6
+      .pa.name.name1
+        .pa.title-name.lt
+          em 充值金额：
+        .pa.info-text
+          em {1000.00元}
+      .pa.name.name2
+        .pa.title-name.lt
+          em 充值日期：
+        .pa.info-text
+          em {2015/07/27}
+    a.pa.btn.btn-ps.btn-confirm(href="#" onfocus="showdiv('btn')" onblur="closediv('btn')")
+      img(src="../static/images/p135_ok_btn.png")
+    div.pa.btn.btn-ps.btn-confirm.nom
+    div#btn.pa.btn.btn-ps.btn-confirm.focus(style="visibility:hidden;")

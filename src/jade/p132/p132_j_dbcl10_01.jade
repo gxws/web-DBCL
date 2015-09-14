@@ -1,0 +1,12 @@
+extends ../public/_layout
+block title
+  title DBCL-8-处理中
+block container
+  .pa.container
+    .pa.icon.icon-waiting
+    .pa.info.inf5.tc
+      em.text-white  处理中，请耐心等待...
+    a.pa.btn.btn-ps.btn-result(href="#" onfocus="showdiv('btn')" onblur="closediv('btn')")
+      img(src="../static/images/p135_btn-vr.png")
+    div.pa.btn.btn-ps.btn-result.nom
+    div#btn.pa.btn.btn-ps.btn-result.focus(style="visibility:hidden;")

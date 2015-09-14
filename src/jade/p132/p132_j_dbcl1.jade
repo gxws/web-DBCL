@@ -1,0 +1,16 @@
+extends ../public/_layout
+block title
+  title DBCL-1-信用额度使用提示
+block container
+  .pa.container
+    .pa.icon.icon-usagetip
+    .pa.info.inf1.tc
+      em.text-white 您的账户已透支
+      em.text-yellow 20
+      em.text-white 元，还可透支
+      em.text-yellow 190.00
+      em.text-white 元。
+    a.pa.btn.btn-ps.btn-next(href="#" onfocus="showdiv('btn')" onblur="closediv('btn')")
+      img(src="../static/images/p135_btn_next.png")
+    div.pa.btn.btn-ps.btn-next.nom
+    div#btn.pa.btn.btn-ps.btn-next.focus(style="visibility:hidden;")

@@ -1,0 +1,25 @@
+extends ../public/_layout
+block title
+  title DBCL-2-信息二次确认(业务开通）
+block container
+  .pa.container
+    .pa.info.inf9.text-white
+      em 请确认以下订单信息：
+    .pa.icon.icon-tv.tc
+      .pa.icon-tv-text 芒果TV
+    .pa.vod-info
+      p
+        em.text-white 伪装者
+      p
+        em.text-white 20.00元/月 x 2个月= 
+        em.text-yellow 40.00
+        em.text-white 元
+    .pa.inf10
+      p.sum-info
+        em.text-white 您的账户余额20.00元，可用透支额度150.00元。
+      p.small
+        em.text-gray 费用将从您的账户中扣除，详情请咨询客服热线96335。
+    a.pa.btn.btn-pay(href="#" onfocus="showdiv('btn')" onblur="closediv('btn')")
+      img(src="../static/images/132_btn_pay.png")
+    div.pa.btn.btn-pay.nom
+    div#btn.pa.btn.btn-pay.focus(style="visibility:hidden;")

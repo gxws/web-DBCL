@@ -1,0 +1,29 @@
+extends ../public/_layout
+block title
+  title DBCL-3-账户余额不足提示（可以使用信用额度）
+block container
+  .pa.container
+    form(action="" )
+      .pa.info.inf2
+        p
+          em.text-white 您的账户余额不足，还需。
+          em.text-yellow 20.00
+          em.text-white 元。
+        p
+          em.text-white 是否合并账户并开通信用额度
+          em.text-yellow 2000
+          em.text-white 元（账期30天）？
+      div.pa.bx.merge
+        input(type="checkbox" checked="checked" disabled="disabled")
+        em.text-white 同意
+        a.link(href="#") 合并账户电子协议
+      div.pa.bx.credits
+        input(type="checkbox" checked="checked" disabled="disabled")
+        em.text-white 同意
+        a.link(href="#") 信用额度电子协议
+      a#btn-not.pa.btn.btn-ps.btn-dredge(href="javascript:;" onfocus="showdiv('btn-dredge')" onblur="closediv('btn-dredge')")
+        img(src="../static/images/p135_btn_dredge.png")
+      div.pa.btn.btn-ps.btn-dredge.nom
+      div#btn-dredge.pa.btn.btn-ps.btn-dredge.focus(style="z-index:5;visibility:hidden;")
+      div#dredge-not.pa.btn.btn-ps.btn-dredge.not(style="z-index:10;visibility:hidden;")
+
