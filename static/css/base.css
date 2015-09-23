@@ -709,13 +709,23 @@ body {
   left: 202px;
 }
 .container .vod-info {
-  font-size: 24px;
   width: 367px;
   left: 243px;
-  top: 96px;
+  top: 86px;
 }
 .container .vod-info p {
-  line-height: 32px;
+  line-height: 22px;
+}
+.container .vod-info .vod-title {
+  font-size: 24px;
+}
+.container .vod-info .small {
+  font-size: 18px;
+}
+.container .text-hint {
+  font-size: 18px;
+  left: 30px;
+  top: 280px;
 }
 
 /* footer */

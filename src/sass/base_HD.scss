@@ -346,11 +346,17 @@
  		.vod-info{
  			width:680px;
  			p{
- 				line-height:50px;
+ 				line-height:38px;
  			}
- 			font-size:40px;
+ 			
  			left:490px;
- 			top:120px;
+ 			top:100px;
+ 			.vod-title{
+ 				font-size:38px;
+ 			}
+ 			.small{
+ 				font-size:30px;
+ 			}
  		}
  		.btn{
  			width:230px;
@@ -639,6 +645,11 @@
 			em{font-size:24px;}
 		}
 		.error{font-size:30px;top:430px;left:472px;}
+		.text-hint{
+			font-size:28px;
+			left:80px;
+			top:350px;
+		}
  	}
  	.footer{
  		width:1280px;

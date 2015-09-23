@@ -417,13 +417,23 @@ body{font-family:'/9ED1/4F53',simhei;background-color:#fff;}
 	.error{font-size:20px;color:red;top:340px;left:202px;}
 	.error1{font-size:20px;color:red;top:360px;left:202px;}
 	.vod-info{
-		font-size:24px;
 		width: 367px;
 		left:243px;
-		top:96px;
+		top:86px;
 		p{
-			line-height:32px;
+			line-height:22px;
 		}
+		.vod-title{
+			font-size:24px;
+		}
+		.small{
+			font-size:18px;
+		}
+	}
+	.text-hint{
+		font-size:18px;
+		left:30px;
+		top:280px;
 	}
 }
 

@@ -1,0 +1,16 @@
+extends ../public/_layout
+block title
+  title DBCL-13-充值失败
+block container
+  .pa.container
+    .pa.icon.status-icon.fail
+    .pa.status-info.fail.tc 订购失败！
+    .pa.info.inf3
+      p
+        em.text-white ｛失败原因失败原因失败原因失败原因失败原因失败原因失败原因失败原因失败原因失败原因失败原因失败原因｝
+      p
+        em.text-gray 若有疑问请拨打客服热线96335咨询。
+    a.pa.btn.btn-ps.btn-confirm(href="#" onfocus="showdiv('btn')" onblur="closediv('btn')")
+      img(src="../static/images/p135_ok_btn.png")
+    div.pa.btn.btn-ps.btn-confirm.nom
+    div#btn.pa.btn.btn-ps.btn-confirm.focus(style="visibility:hidden;")

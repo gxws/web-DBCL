@@ -367,12 +367,17 @@
   }
   .container .vod-info {
     width: 680px;
-    font-size: 40px;
     left: 490px;
-    top: 120px;
+    top: 100px;
   }
   .container .vod-info p {
-    line-height: 50px;
+    line-height: 38px;
+  }
+  .container .vod-info .vod-title {
+    font-size: 38px;
+  }
+  .container .vod-info .small {
+    font-size: 30px;
   }
   .container .btn {
     width: 230px;
@@ -688,6 +693,11 @@
     font-size: 30px;
     top: 430px;
     left: 472px;
+  }
+  .container .text-hint {
+    font-size: 28px;
+    left: 80px;
+    top: 350px;
   }
 
   .footer {

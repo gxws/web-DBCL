@@ -1,0 +1,18 @@
+extends ../public/_layout
+block title
+  title DBCL-13-充值成功
+block container
+  .pa.container
+    .pa.icon.status-icon.succeed.succeed1
+    .pa.status-info.succeed.succeed1.tc 透支额度成功！
+    .pa.info.inf1
+      p
+        em.text-white 您本次充值
+        em.text-yellow 200
+        em.text-white 元，并已成功订购
+        em.text-yellow 芒果TV专区，有效期至2015-10-10。
+    .pa.text-hint.text-gray 按确定键返回专区观看节目，详情请咨询96335。
+    a.pa.btn.btn-ps.btn-confirm(href="#" onfocus="showdiv('btn')" onblur="closediv('btn')")
+      img(src="../static/images/p135_ok_btn.png")
+    div.pa.btn.btn-ps.btn-confirm.nom
+    div#btn.pa.btn.btn-ps.btn-confirm.focus(style="visibility:hidden;")
