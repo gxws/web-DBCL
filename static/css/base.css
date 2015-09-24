@@ -120,8 +120,14 @@ body {
 
 .text-yellow {
   color: #ffc800;
+  font-size: 26px;
 }
 
+@media (min-width: 1280px) {
+  .text-yellow {
+    font-size: 36px;
+  }
+}
 .text-gray {
   color: #aabedc;
 }
