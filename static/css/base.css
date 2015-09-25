@@ -246,16 +246,16 @@ body {
   top: 67px;
 }
 .container .icon-tv {
-  width: 150px;
-  height: 100px;
+  width: 158px;
+  height: 102px;
   left: 80px;
   top: 86px;
-  background: url(../images/p132_icon_tv.png);
+  background: url(../images/p132_icon_tv.jpg);
 }
 .container .icon-tv .icon-tv-text {
-  width: 150px;
+  width: 158px;
   left: 0;
-  top: 32px;
+  top: 31px;
   color: #a4d6ff;
   font-size: 22px;
 }

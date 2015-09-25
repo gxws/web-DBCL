@@ -224,14 +224,14 @@
   }
   .container .icon.icon-tv {
     left: 220px;
-    width: 250px;
-    height: 165px;
+    width: 252px;
+    height: 162px;
     top: 101px;
-    background: url(../images/p132_icon_tv_HD.png);
+    background: url(../images/p132_icon_tv_HD.jpg);
   }
   .container .icon.icon-tv .icon-tv-text {
     width: inherit;
-    top: 52px;
+    top: 53px;
     font-size: 36px;
   }
   .container .info-icon {
@@ -697,7 +697,7 @@
   .container .text-hint {
     font-size: 28px;
     left: 80px;
-    top: 350px;
+    top: 380px;
   }
 
   .footer {
