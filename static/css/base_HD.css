@@ -119,6 +119,11 @@
   background: url(../images/p135_checked_focus.png) 0 0 no-repeat;
 }
 
+.text-yellow {
+  color: #ffc800;
+  font-size: 26px;
+}
+
 @media (min-width: 1280px) {
   .text-yellow {
     font-size: 36px;
@@ -374,8 +379,12 @@
     left: 490px;
     top: 100px;
   }
+  .container .vod-info .info-box {
+    left: 0;
+    top: 80px;
+  }
   .container .vod-info p {
-    line-height: 38px;
+    line-height: 42px;
   }
   .container .vod-info .vod-title {
     font-size: 38px;

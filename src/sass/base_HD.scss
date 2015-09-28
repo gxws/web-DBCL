@@ -96,7 +96,7 @@
 		}
 	}
 }
-
+.text-yellow{color:#ffc800;font-size:26px;}
 @media (min-width:1280px){
 
 	.text-yellow{font-size:36px;}
@@ -347,8 +347,12 @@
  		}
  		.vod-info{
  			width:680px;
+ 			.info-box{
+				left:0;
+				top:80px;
+			}
  			p{
- 				line-height:38px;
+ 				line-height:42px;
  			}
  			
  			left:490px;

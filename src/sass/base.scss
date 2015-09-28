@@ -29,7 +29,7 @@ body{font-family:'/9ED1/4F53',simhei;background-color:#fff;}
 .fix:after{clear:both;}
 /* color */
 .text-white{color:#fff;}
-.text-yellow{color:#ffc800;font-size:26px;}
+.text-yellow{color:#ffc800;}
 .text-gray{color:#aabedc}
 /* font */
 .tc{text-align:center;}
@@ -244,6 +244,7 @@ body{font-family:'/9ED1/4F53',simhei;background-color:#fff;}
 		width:580px;
 		left:80px;
 		top:215px;
+
 		p{
 			line-height:32px;
 		}
@@ -420,8 +421,12 @@ body{font-family:'/9ED1/4F53',simhei;background-color:#fff;}
 		width: 367px;
 		left:243px;
 		top:86px;
+		.info-box{
+			left:0;
+			top:55px;
+		}
 		p{
-			line-height:22px;
+			line-height:25px;
 		}
 		.vod-title{
 			font-size:24px;
