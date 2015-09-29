@@ -242,7 +242,7 @@ body {
 .container .icon-tv {
   width: 158px;
   height: 102px;
-  left: 80px;
+  left: 50px;
   top: 86px;
   background: url(../images/p132_icon_tv.jpg);
 }
@@ -380,12 +380,12 @@ body {
   top: 107px;
 }
 .container .info.inf9 {
-  left: 80px;
+  left: 50px;
   top: 52px;
 }
 .container .inf10 {
   width: 580px;
-  left: 80px;
+  left: 50px;
   top: 215px;
 }
 .container .inf10 p {
@@ -710,7 +710,7 @@ body {
 }
 .container .vod-info {
   width: 367px;
-  left: 243px;
+  left: 213px;
   top: 86px;
 }
 .container .vod-info .info-box {
